@@ -1,0 +1,112 @@
+.map-feed {
+	
+	margin-top: -380px;
+	z-index: 1;
+	border-radius: 15px 15px 0 0;
+	background: #151515;
+	color: #ffffff;
+	&--close {
+		display: none;
+	}
+	&--open {
+		display: block;
+		animation-name: menu;
+		animation-duration: 0.5s;
+	}
+
+	@keyframes menu {
+		from {
+			transform: translateY(800px);
+		}
+	}
+
+	&__items {
+		height: 867px;
+		overflow: scroll;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	&__item {
+		border-top: 1px solid #2A2A2A;
+		&:first-of-type {
+			border-top: none;
+		}
+		&-link {
+			position: relative;
+			height: 132px;
+			display: flex;
+			flex-direction: column;
+
+			margin: 0;
+			padding: 0;
+			padding-top: 42px;
+			padding-bottom: 42px;
+			padding-left: 72px;
+			z-index: 0;
+			text-decoration: none;
+			color: #ffffff;
+		}
+		&-flag {
+			position: absolute;
+			top: 24px;
+			right: 12px;
+
+			width: 9px;
+			height: 10px;
+			background: url("../img/flag-active.svg") no-repeat center;
+		}
+		&-image {
+			position: absolute;
+			top: 24px;
+			left: 12px;
+
+			width: 124px;
+			height: 168px;
+			opacity: 0.4;
+			z-index: -1;
+			border-radius: 8px;
+			/*&-video {
+				width: 188px;
+				height: 120px;
+			}*/
+
+			
+			&-surreal {
+				background: url("../img/king.png") no-repeat center;
+			}
+			&-645AR {
+				background: url("../img/hottest.png") no-repeat center;
+			}
+			&-final {
+				background: url("../img/smile.png") no-repeat center;
+			}
+			&-king {
+				background: url("../img/hip-hop.png") no-repeat center;
+			}
+			&-kai {
+				background: url("../img/kai.png") no-repeat center;
+			}
+			&-issei {
+				background: url("../img/issei.png") no-repeat center;
+			}
+		}
+		&-heading {
+			margin: 0;
+			padding: 0;
+			padding-bottom: 0px;
+			margin-bottom: auto;
+
+			font-size: 18px;
+			line-height: 21px;
+		}
+		&-text {
+			margin: 0;
+			padding: 0;
+
+			font-size: 14px;
+			line-height: 16px;
+			color: #D5D5D5;
+		}
+	}
+}
